@@ -6,32 +6,39 @@ import IconWhatsapp from "@/assets/icons/IconWhatsapp.svg";
 import IconFacebook from "@/assets/icons/IconFacebook.svg";
 import IconTelegram from "@/assets/icons/IconTelegram.svg";
 import IconPinterest from "@/assets/icons/IconPinterest.svg";
+import IconInstagram from "@/assets/icons/IconInstagram.svg";
 import { SITE } from "@/config";
 
 export const SOCIALS = [
   {
     name: "Github",
-    href: "https://github.com/satnaing/astro-paper",
+    href: "https://github.com/dabernathy89",
     linkTitle: ` ${SITE.title} on Github`,
     icon: IconGitHub,
   },
   {
     name: "X",
-    href: "https://x.com/username",
+    href: "https://x.com/dabernathy89",
     linkTitle: `${SITE.title} on X`,
     icon: IconBrandX,
   },
   {
     name: "LinkedIn",
-    href: "https://www.linkedin.com/in/username/",
+    href: "https://www.linkedin.com/in/daniel-abernathy/",
     linkTitle: `${SITE.title} on LinkedIn`,
     icon: IconLinkedin,
   },
   {
     name: "Mail",
-    href: "mailto:yourmail@gmail.com",
+    href: "mailto:daniel@danielabernathy.com",
     linkTitle: `Send an email to ${SITE.title}`,
     icon: IconMail,
+  },
+  {
+    name: "Instagram",
+    href: "mailto:daniel@danielaberhttps://www.instagram.com/dabernathy89/nathy.com",
+    linkTitle: `Daniel Abernathy on Instagram`,
+    icon: IconInstagram,
   },
 ] as const;
 

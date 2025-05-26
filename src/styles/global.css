@@ -4,20 +4,12 @@
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 :root,
-html[data-theme="light"] {
+html {
   --background: #fdfdfd;
   --foreground: #282728;
   --accent: #006cac;
   --muted: #e6e6e6;
   --border: #ece9e9;
-}
-
-html[data-theme="dark"] {
-  --background: #212737;
-  --foreground: #eaedf3;
-  --accent: #ff6b01;
-  --muted: #343f60bf;
-  --border: #ab4b08;
 }
 
 @theme inline {
@@ -29,28 +21,25 @@ html[data-theme="dark"] {
 }
 
 @layer base {
-  * {
-    @apply border-border outline-accent/75;
-    scrollbar-width: auto;
-    scrollbar-color: var(--color-muted) transparent;
-  }
-  html {
-    @apply overflow-y-scroll scroll-smooth;
-  }
   body {
-    @apply flex min-h-svh flex-col bg-background font-mono text-foreground selection:bg-accent/75 selection:text-background;
+    @apply font-mono text-foreground;
+    background: linear-gradient(120deg,
+        #faf8f3 0%,
+        #f0ebd2 40%,
+        #e8dcc0 70%,
+        #ddd0b0 100%);
+    min-height: 100vh;
+    width: 100%;
   }
+
   a,
   button {
-    @apply outline-offset-1 outline-accent focus-visible:no-underline focus-visible:outline-2 focus-visible:outline-dashed;
+    @apply outline-offset-1 text-accent focus-visible:no-underline focus-visible:outline-2 focus-visible:outline-dashed;
   }
+
   button:not(:disabled),
   [role="button"]:not(:disabled) {
     cursor: pointer;
-  }
-  section,
-  footer {
-    @apply mx-auto max-w-3xl px-4;
   }
 }
 
