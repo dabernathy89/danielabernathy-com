@@ -24,7 +24,7 @@ export const SOCIALS = [
   },
   {
     name: "LinkedIn",
-    href: "https://www.linkedin.com/in/daniel-abernathy/",
+    href: "https://www.linkedin.com/in/dabernathy89/",
     linkTitle: `${SITE.title} on LinkedIn`,
     icon: IconLinkedin,
   },
