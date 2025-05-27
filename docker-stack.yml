@@ -1,0 +1,35 @@
+version: "3.8"
+
+services:
+  app:
+    image: ghcr.io/dabernathy89/danielabernathy-com:latest
+    networks:
+      - traefik-public
+    deploy:
+      mode: replicated
+      replicas: 1
+      update_config:
+        parallelism: 1
+        delay: 10s
+        order: start-first
+      restart_policy:
+        condition: on-failure
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=traefik-public"
+        - "traefik.http.routers.danielabernathy-com-router.rule=Host(`danielabernathy.com`) || Host(`www.danielabernathy.com`)"
+        - "traefik.http.routers.danielabernathy-com-router.entrypoints=web"
+        - "traefik.http.routers.danielabernathy-com-router.middlewares=redirect-to-https"
+        - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
+        - "traefik.http.routers.danielabernathy-com-https-router.rule=Host(`danielabernathy.com`) || Host(`www.danielabernathy.com`)"
+        - "traefik.http.routers.danielabernathy-com-https-router.entrypoints=websecure"
+        - "traefik.http.routers.danielabernathy-com-https-router.tls.certresolver=myresolver"
+        - "traefik.http.services.danielabernathy-com-service.loadbalancer.server.port=80"
+
+        # Add label for Gantry to filter services by label instead of name
+        - "auto-update=true"
+
+networks:
+  traefik-public:
+    external: true
+    name: traefik-public
