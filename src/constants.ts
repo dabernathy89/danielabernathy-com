@@ -36,7 +36,7 @@ export const SOCIALS = [
   },
   {
     name: "Instagram",
-    href: "mailto:daniel@danielaberhttps://www.instagram.com/dabernathy89/nathy.com",
+    href: "https://www.instagram.com/dabernathy89/nathy.com",
     linkTitle: `Daniel Abernathy on Instagram`,
     icon: IconInstagram,
   },
