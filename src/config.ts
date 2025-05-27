@@ -1,7 +1,7 @@
 export const SITE = {
   website: "https://danielabernathy.com/",
   author: "Daniel Abernathy",
-  profile: "https://satnaing.dev/",
+  profile: "https://danielabernathy.com/",
   desc: "Personal website of Daniel Abernathy.",
   title: "Daniel Abernathy",
   ogImage: "abernathy-family.webp",
