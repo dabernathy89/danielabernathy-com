@@ -1,5 +1,6 @@
 export const SITE = {
-  website: "https://danielabernathy.com/",
+  website: "https://dabernathy89.github.io/",
+  base: "/danielabernathy-com",
   author: "Daniel Abernathy",
   profile: "https://danielabernathy.com/",
   desc: "Personal website of Daniel Abernathy.",
